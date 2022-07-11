@@ -2,6 +2,7 @@ package Tests;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import pageObjects.HomePage;
@@ -21,10 +22,14 @@ public class SimpleMerchant {
 
     private TriggerPage triggers = new TriggerPage(driver);
 
+    /**Delete all current behaviours for setup
+     *Navigates to new behaviour
+     */
     @Before
     public void individualSetUp(){
         triggers.goTo();
         triggers.navigateToAndDeleteBehaviour();
+        triggers.navigateToNewBehaviour();
     }
 
     /**Make a user request
@@ -45,10 +50,8 @@ public class SimpleMerchant {
         merchantPage.submitPurchaseRequest();
     }
 
-    @Test
-    public void deleteAllCurrentBehaviours(){
-        triggers.goTo();
-        triggers.navigateToNewBehaviour();
+    @Test @Ignore
+    public void triggersAndResponseTypeExamples(){
 //        triggers.triggerAny();
 //        triggers.triggerXml("www.google.com");
 //        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
@@ -58,7 +61,7 @@ public class SimpleMerchant {
 //        triggers.triggerEnrolledRequest();
 //        triggers.triggerSigRequest();
 //        triggers.triggerVoidRequest();
-        triggers.responseTypeList("Default Realex simulation");
+//        triggers.responseTypeList("Default Realex simulation");
     }
 
 

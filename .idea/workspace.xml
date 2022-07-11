@@ -7,7 +7,6 @@
     <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,13 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657565987528</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="triggers and responses added">
+      <created>1657572023074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657572023074</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding all the base files" />
     <MESSAGE value="got a working user flow/story" />
     <MESSAGE value="dangerous button added" />
-    <option name="LAST_COMMIT_MESSAGE" value="dangerous button added" />
+    <MESSAGE value="triggers and responses added" />
+    <option name="LAST_COMMIT_MESSAGE" value="triggers and responses added" />
   </component>
 </project>
