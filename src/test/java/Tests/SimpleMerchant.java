@@ -23,9 +23,8 @@ public class SimpleMerchant {
 
     @Before
     public void individualSetUp(){
-//        triggers.goTo();
-//        triggers.navigateToAndDeleteBehaviour();
-//        homepage.goTo();
+        triggers.goTo();
+        triggers.navigateToAndDeleteBehaviour();
     }
 
     /**Make a user request
@@ -34,6 +33,7 @@ public class SimpleMerchant {
 
     @Test
     public void testingTriggerOne(){
+        homepage.goTo();
         merchantPage.enterCreditCardNumber("4242424242424242");
         merchantPage.enterFirstName("Saghir");
         merchantPage.enterLastName("Ayub");
@@ -48,7 +48,17 @@ public class SimpleMerchant {
     @Test
     public void deleteAllCurrentBehaviours(){
         triggers.goTo();
-        triggers.navigateToAndDeleteBehaviour();
+        triggers.navigateToNewBehaviour();
+//        triggers.triggerAny();
+//        triggers.triggerXml("www.google.com");
+//        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
+//        triggers.triggerNameOfCardHolder("Saghir Ayub","auth");
+//        triggers.triggerPence("99","void");
+//        triggers.triggerAuthRequest();
+//        triggers.triggerEnrolledRequest();
+//        triggers.triggerSigRequest();
+//        triggers.triggerVoidRequest();
+        triggers.responseTypeList("Default Realex simulation");
     }
 
 
