@@ -15,7 +15,7 @@ public class SimpleMerchant {
 
     public static WebDriver driver = driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
-    private SimpleMerchantPage basketpage = new SimpleMerchantPage(driver);
+    private SimpleMerchantPage merchantPage = new SimpleMerchantPage(driver);
 
 
     @Before
@@ -23,18 +23,21 @@ public class SimpleMerchant {
         homepage.goTo();
     }
 
-
-    /**Increase quantity of product
-     * Pre-Condition - Must have one item in basket
-     * Navigate to basket
-     * Increase quantity of product
-     * Verify basket updated with correct quantity
-     * Verify Product counter (Top right) is updated
-     * Extension - verify pricing and totals are updated to reflect accurately
+    /**Make a user request
+     * Fill all the input fields
      */
-    @Test
-    public void increaseQuantityOfProductInBasket(){
 
+    @Test
+    public void testingTriggerOne(){
+        homepage.goTo();
+        merchantPage.enterCreditCardNumber("1123");
+        merchantPage.enterFirstName("Saghir");
+        merchantPage.enterLastName("Ayub");
+        merchantPage.enterExpirationMonth("1");
+        merchantPage.enterExpirationYear("1999");
+        merchantPage.enterVerificationCode("123");
+        merchantPage.enterAmount("1234999");
+        merchantPage.selectCurrency();
     }
 
     /**Remove item from shopping cart

@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/Registration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/TestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ReportPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SimpleMerchantPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SimpleMerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SimpleMerchantPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +52,46 @@
       <recent name="pageObjects" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.SimpleMerchant.testingTriggerOne">
+    <configuration name="SimpleMerchant.increaseQuantityOfProductInBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSF-Group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
+      <option name="METHOD_NAME" value="increaseQuantityOfProductInBasket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleMerchant.testingTriggerOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSF-Group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
+      <option name="METHOD_NAME" value="testingTriggerOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleMerchant.testingTriggerOne" />
+        <item itemvalue="JUnit.SimpleMerchant.increaseQuantityOfProductInBasket" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,6 +101,18 @@
       <option name="presentableId" value="Default" />
       <updated>1657537157179</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding all the base files">
+      <created>1657539184899</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657539184899</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding all the base files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding all the base files" />
   </component>
 </project>

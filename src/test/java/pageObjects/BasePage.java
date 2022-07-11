@@ -29,9 +29,9 @@ abstract class BasePage {
         element.click();
     }
 
-    void waitAndSubmit(By selector) {
+    void waitAndSubmit(By selector, int number) {
         List<WebElement> radio = driver.findElements(selector);
-        radio.get(1).click();
+        radio.get(number).click();
     }
 
     boolean elementIsVisible(WebElement element) {
@@ -45,6 +45,7 @@ abstract class BasePage {
 
     void findAndType(By elementSelector, String inputString) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(elementSelector));
+        element.clear();
         element.sendKeys(inputString);
     }
 
