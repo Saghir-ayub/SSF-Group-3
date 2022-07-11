@@ -31,6 +31,8 @@ public class SimpleMerchantPage extends BasePage {
 
     private static final By CURRENCY = By.cssSelector(".form-control option");
 
+    private static final By PURCHASE_REQUEST = By.cssSelector("[name='commit']");
+
     public SimpleMerchantPage(WebDriver driver) {
         super(driver);
     }
@@ -66,5 +68,7 @@ public class SimpleMerchantPage extends BasePage {
     public void selectCurrency(){
         waitAndSubmit(CURRENCY,1);
     }
+
+    public void submitPurchaseRequest(){waitAndClick(PURCHASE_REQUEST);}
 
 }

@@ -1,10 +1,12 @@
 package Tests;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import pageObjects.HomePage;
 import pageObjects.SimpleMerchantPage;
+import pageObjects.TriggerPage;
 
 import static Tests.TestSuite.driverFactory;
 
@@ -17,10 +19,13 @@ public class SimpleMerchant {
     private HomePage homepage = new HomePage(driver);
     private SimpleMerchantPage merchantPage = new SimpleMerchantPage(driver);
 
+    private TriggerPage triggers = new TriggerPage(driver);
 
     @Before
     public void individualSetUp(){
-        homepage.goTo();
+//        triggers.goTo();
+//        triggers.navigateToAndDeleteBehaviour();
+//        homepage.goTo();
     }
 
     /**Make a user request
@@ -29,27 +34,21 @@ public class SimpleMerchant {
 
     @Test
     public void testingTriggerOne(){
-        homepage.goTo();
-        merchantPage.enterCreditCardNumber("1123");
+        merchantPage.enterCreditCardNumber("4242424242424242");
         merchantPage.enterFirstName("Saghir");
         merchantPage.enterLastName("Ayub");
         merchantPage.enterExpirationMonth("1");
-        merchantPage.enterExpirationYear("1999");
+        merchantPage.enterExpirationYear("2025");
         merchantPage.enterVerificationCode("123");
         merchantPage.enterAmount("1234999");
         merchantPage.selectCurrency();
+        merchantPage.submitPurchaseRequest();
     }
 
-    /**Remove item from shopping cart
-     * Pre-Condition - Item must be in basket
-     * Navigate to basket
-     * Click Delete
-     * Verify Item is removed from Basket
-     * Extension - verify pricing and totals are updated to reflect accurately
-     */
     @Test
-    public void removeItemFromShoppingBasket(){
-
+    public void deleteAllCurrentBehaviours(){
+        triggers.goTo();
+        triggers.navigateToAndDeleteBehaviour();
     }
 
 
