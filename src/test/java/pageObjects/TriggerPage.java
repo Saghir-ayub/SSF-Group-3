@@ -45,6 +45,13 @@ public class TriggerPage extends BasePage {
 
     private static final By RESPONSE_TYPE_LIST = By.cssSelector("[name='responseForm'] option");
 
+    private static final By CUSTOM_TEXT_RESPONSE = By.cssSelector("[label='Custom text response']");
+
+    private static final By DESCRIPTION_OF_RESPONSE = By.cssSelector("[name='description']");
+
+    private static final By RESPONSE_TO_CLIENT = By.cssSelector("[name='response']");
+    private static final By SAVE_BEHAVIOUR = By.id("save-button");
+
 
     public void goTo(){
         driver.get(URL);
@@ -99,7 +106,7 @@ public class TriggerPage extends BasePage {
     }
 
     public void responseTypeList(String responseChoice){
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("save-button")));
+        wait.until(ExpectedConditions.elementToBeClickable(SAVE_BEHAVIOUR));
         List<WebElement> listOfResponseTypes = driver.findElements(RESPONSE_TYPE_LIST);
         for(WebElement response:listOfResponseTypes){
             if(response.getText().equals(responseChoice)){
@@ -108,5 +115,12 @@ public class TriggerPage extends BasePage {
             }
         }
     }
+
+    public void setCustomTextResponse(String description, String response){
+        waitAndClick(CUSTOM_TEXT_RESPONSE);
+        findAndType(DESCRIPTION_OF_RESPONSE,description);
+        findAndType(RESPONSE_TO_CLIENT,response);
+    }
+    public void saveBehaviour(){waitAndClick(SAVE_BEHAVIOUR);}
 
 }

@@ -7,6 +7,7 @@
     <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Tests" />
       <recent name="pageObjects" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleMerchant.deleteAllCurrentBehaviours">
+  <component name="RunManager" selected="JUnit.SimpleMerchant.triggersAndResponseTypeExamples">
     <configuration name="SimpleMerchant.deleteAllCurrentBehaviours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
@@ -99,8 +100,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimpleMerchant.triggersAndResponseTypeExamples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSF-Group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
+      <option name="METHOD_NAME" value="triggersAndResponseTypeExamples" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleMerchant.triggersAndResponseTypeExamples" />
         <item itemvalue="JUnit.SimpleMerchant.deleteAllCurrentBehaviours" />
         <item itemvalue="JUnit.SimpleMerchant.testingTriggerOne" />
         <item itemvalue="JUnit.SimpleMerchant.increaseQuantityOfProductInBasket" />
@@ -144,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657572023074</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleaned up code around triggers and responses">
+      <created>1657572283187</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657572283187</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,6 +177,7 @@
     <MESSAGE value="got a working user flow/story" />
     <MESSAGE value="dangerous button added" />
     <MESSAGE value="triggers and responses added" />
-    <option name="LAST_COMMIT_MESSAGE" value="triggers and responses added" />
+    <MESSAGE value="cleaned up code around triggers and responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code around triggers and responses" />
   </component>
 </project>

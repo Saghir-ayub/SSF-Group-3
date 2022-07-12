@@ -30,6 +30,15 @@ public class SimpleMerchant {
         triggers.goTo();
         triggers.navigateToAndDeleteBehaviour();
         triggers.navigateToNewBehaviour();
+        triggers.triggerXml("www.google.com");
+//        triggers.responseTypeList("Default Realex simulation");
+//        triggers.saveBehaviour();
+//        triggers.navigateToNewBehaviour();
+//        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
+//        triggers.responseTypeList("Default Realex simulation");
+//        triggers.saveBehaviour();
+        triggers.setCustomTextResponse("You failure","I said you failure");
+        triggers.saveBehaviour();
     }
 
     /**Make a user request
@@ -62,6 +71,7 @@ public class SimpleMerchant {
 //        triggers.triggerSigRequest();
 //        triggers.triggerVoidRequest();
 //        triggers.responseTypeList("Default Realex simulation");
+//        triggers.saveBehaviour();
     }
 
 
