@@ -7,7 +7,6 @@
     <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <recent name="pageObjects" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleMerchant.triggersAndResponseTypeExamples">
+  <component name="RunManager" selected="JUnit.SimpleMerchant.testingTriggerOne">
     <configuration name="SimpleMerchant.deleteAllCurrentBehaviours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
@@ -118,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleMerchant.testingTriggerOne" />
         <item itemvalue="JUnit.SimpleMerchant.triggersAndResponseTypeExamples" />
         <item itemvalue="JUnit.SimpleMerchant.deleteAllCurrentBehaviours" />
-        <item itemvalue="JUnit.SimpleMerchant.testingTriggerOne" />
         <item itemvalue="JUnit.SimpleMerchant.increaseQuantityOfProductInBasket" />
       </list>
     </recent_temporary>
@@ -169,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657572283187</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added in custom response">
+      <created>1657611824670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657611824670</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +184,7 @@
     <MESSAGE value="dangerous button added" />
     <MESSAGE value="triggers and responses added" />
     <MESSAGE value="cleaned up code around triggers and responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up code around triggers and responses" />
+    <MESSAGE value="added in custom response" />
+    <option name="LAST_COMMIT_MESSAGE" value="added in custom response" />
   </component>
 </project>

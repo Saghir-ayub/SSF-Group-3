@@ -30,15 +30,6 @@ public class SimpleMerchant {
         triggers.goTo();
         triggers.navigateToAndDeleteBehaviour();
         triggers.navigateToNewBehaviour();
-        triggers.triggerXml("www.google.com");
-//        triggers.responseTypeList("Default Realex simulation");
-//        triggers.saveBehaviour();
-//        triggers.navigateToNewBehaviour();
-//        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
-//        triggers.responseTypeList("Default Realex simulation");
-//        triggers.saveBehaviour();
-        triggers.setCustomTextResponse("You failure","I said you failure");
-        triggers.saveBehaviour();
     }
 
     /**Make a user request
@@ -47,8 +38,11 @@ public class SimpleMerchant {
 
     @Test
     public void testingTriggerOne(){
+        triggers.triggerCardNumber("2383191834833352","3ds-verifyenrolled");
+        triggers.responseTypeList("Realex: Void Successful");
+        triggers.saveBehaviour();
         homepage.goTo();
-        merchantPage.enterCreditCardNumber("4242424242424242");
+        merchantPage.enterCreditCardNumber("2383191834833352");
         merchantPage.enterFirstName("Saghir");
         merchantPage.enterLastName("Ayub");
         merchantPage.enterExpirationMonth("1");
@@ -59,8 +53,7 @@ public class SimpleMerchant {
         merchantPage.submitPurchaseRequest();
     }
 
-    @Test @Ignore
-    public void triggersAndResponseTypeExamples(){
+//        Types of triggers:
 //        triggers.triggerAny();
 //        triggers.triggerXml("www.google.com");
 //        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
@@ -70,8 +63,17 @@ public class SimpleMerchant {
 //        triggers.triggerEnrolledRequest();
 //        triggers.triggerSigRequest();
 //        triggers.triggerVoidRequest();
+
+//        Types of responses:
+//        triggers.setCustomTextResponse("You failure","I said you failure");
 //        triggers.responseTypeList("Default Realex simulation");
+
+//        Saving Behaviour:
 //        triggers.saveBehaviour();
+
+    @Test @Ignore
+    public void triggersAndResponseTypeExamples(){
+
     }
 
 
