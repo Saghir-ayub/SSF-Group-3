@@ -27,9 +27,9 @@ public class SimpleMerchant {
      */
     @Before
     public void individualSetUp(){
-        triggers.goTo();
-        triggers.navigateToAndDeleteBehaviour();
-        triggers.navigateToNewBehaviour();
+//        triggers.goTo();
+//        triggers.navigateToAndDeleteBehaviour();
+//        triggers.navigateToNewBehaviour();
     }
 
     /**Make a user request
@@ -38,18 +38,22 @@ public class SimpleMerchant {
 
     @Test
     public void testingTriggerOne(){
-        triggers.triggerCardNumber("2383191834833352","3ds-verifyenrolled");
-        triggers.responseTypeList("Realex: Void Successful");
-        triggers.saveBehaviour();
+//        triggers.triggerCardNumber("4825503966212779","3ds-verifyenrolled");
+//        triggers.responseTypeList("Realex: Void Successful");
+//        triggers.saveBehaviour();
+//        triggers.navigateToNewBehaviour();
+//        triggers.triggerPence("99","void");
+//        triggers.responseTypeList("Realex: Void Successful");
+//        triggers.saveBehaviour();
         homepage.goTo();
-        merchantPage.enterCreditCardNumber("2383191834833352");
+        merchantPage.enterCreditCardNumber("4242424242424242");
         merchantPage.enterFirstName("Saghir");
         merchantPage.enterLastName("Ayub");
         merchantPage.enterExpirationMonth("1");
         merchantPage.enterExpirationYear("2025");
         merchantPage.enterVerificationCode("123");
         merchantPage.enterAmount("1234999");
-        merchantPage.selectCurrency();
+        merchantPage.selectCurrency(2);
         merchantPage.submitPurchaseRequest();
     }
 

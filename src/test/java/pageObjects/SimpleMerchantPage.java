@@ -65,8 +65,8 @@ public class SimpleMerchantPage extends BasePage {
         findAndType(AMOUNT,amount);
     }
 
-    public void selectCurrency(){
-        waitAndSubmit(CURRENCY,1);
+    public void selectCurrency(int currency012){
+        waitAndSubmit(CURRENCY,currency012);
     }
 
     public void submitPurchaseRequest(){waitAndClick(PURCHASE_REQUEST);}
