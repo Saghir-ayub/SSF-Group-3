@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="asdasd">
+    <list default="true" id="2e9241b4-9614-441d-8da8-ee4e2239bd30" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SimpleMerchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/ReportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/ReportPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/SimpleMerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/SimpleMerchantPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjects/TriggerPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +55,8 @@
       <recent name="pageObjects" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleMerchant.testingTriggerOne">
-    <configuration name="SimpleMerchant.deleteAllCurrentBehaviours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SimpleMerchant.triggerNameOfCardHolderCheck">
+    <configuration name="SimpleMerchant.checkingTriggerPence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
         <pattern>
@@ -62,13 +66,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
-      <option name="METHOD_NAME" value="deleteAllCurrentBehaviours" />
+      <option name="METHOD_NAME" value="checkingTriggerPence" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleMerchant.increaseQuantityOfProductInBasket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleMerchant.proceedToCheckoutNotLoggedIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
         <pattern>
@@ -78,13 +82,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
-      <option name="METHOD_NAME" value="increaseQuantityOfProductInBasket" />
+      <option name="METHOD_NAME" value="proceedToCheckoutNotLoggedIn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleMerchant.testingTriggerOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleMerchant.testingCardNotEnrolledThenAuthFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +98,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
-      <option name="METHOD_NAME" value="testingTriggerOne" />
+      <option name="METHOD_NAME" value="testingCardNotEnrolledThenAuthFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleMerchant.triggersAndResponseTypeExamples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleMerchant.testingCardNotEnrolledThenAuthSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSF-Group-3" />
       <extension name="coverage">
         <pattern>
@@ -110,7 +114,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
-      <option name="METHOD_NAME" value="triggersAndResponseTypeExamples" />
+      <option name="METHOD_NAME" value="testingCardNotEnrolledThenAuthSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleMerchant.triggerNameOfCardHolderCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSF-Group-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SimpleMerchant" />
+      <option name="METHOD_NAME" value="triggerNameOfCardHolderCheck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,10 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimpleMerchant.testingTriggerOne" />
-        <item itemvalue="JUnit.SimpleMerchant.triggersAndResponseTypeExamples" />
-        <item itemvalue="JUnit.SimpleMerchant.deleteAllCurrentBehaviours" />
-        <item itemvalue="JUnit.SimpleMerchant.increaseQuantityOfProductInBasket" />
+        <item itemvalue="JUnit.SimpleMerchant.triggerNameOfCardHolderCheck" />
+        <item itemvalue="JUnit.SimpleMerchant.proceedToCheckoutNotLoggedIn" />
+        <item itemvalue="JUnit.SimpleMerchant.testingCardNotEnrolledThenAuthSuccess" />
+        <item itemvalue="JUnit.SimpleMerchant.testingCardNotEnrolledThenAuthFail" />
+        <item itemvalue="JUnit.SimpleMerchant.checkingTriggerPence" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657613028941</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="currency updated to be changable">
+      <created>1657614917530</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657614917530</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,6 +222,7 @@
     <MESSAGE value="cleaned up code around triggers and responses" />
     <MESSAGE value="added in custom response" />
     <MESSAGE value="user path made" />
-    <option name="LAST_COMMIT_MESSAGE" value="user path made" />
+    <MESSAGE value="currency updated to be changable" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency updated to be changable" />
   </component>
 </project>

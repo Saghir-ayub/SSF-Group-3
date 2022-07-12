@@ -33,6 +33,9 @@ public class SimpleMerchantPage extends BasePage {
 
     private static final By PURCHASE_REQUEST = By.cssSelector("[name='commit']");
 
+    private static final By RETURN_INCORRECT_PASSWORD = By.cssSelector("[title='Return with an invalid password']");
+    private static final By AUTHENTICATION_SUBMIT_BUTTON = By.cssSelector("#acs-submit");
+
     public SimpleMerchantPage(WebDriver driver) {
         super(driver);
     }
@@ -70,5 +73,14 @@ public class SimpleMerchantPage extends BasePage {
     }
 
     public void submitPurchaseRequest(){waitAndClick(PURCHASE_REQUEST);}
+
+    public void setReturnIncorrectPassword(){waitAndClick(RETURN_INCORRECT_PASSWORD);}
+
+    public void clickAuthenticationSubmitButton(){
+//        WebElement authButton = driver.findElement(AUTHENTICATION_SUBMIT_BUTTON);
+//        authButton.click();
+        driver.switchTo().frame("acsframe");
+        waitAndClick(AUTHENTICATION_SUBMIT_BUTTON);
+    }
 
 }

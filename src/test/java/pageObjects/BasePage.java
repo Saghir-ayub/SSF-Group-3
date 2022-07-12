@@ -29,6 +29,11 @@ abstract class BasePage {
         element.click();
     }
 
+    void waitAndSubmitButton(By selector) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(selector));
+        element.click();
+    }
+
     void waitAndSubmit(By selector, int number) {
         List<WebElement> radio = driver.findElements(selector);
         radio.get(number).click();

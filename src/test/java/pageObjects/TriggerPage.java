@@ -18,7 +18,7 @@ public class TriggerPage extends BasePage {
     public TriggerPage(WebDriver driver) {
         super(driver);
     }
-    private static String URL = "http://35.177.167.86:8080/#/";
+    private static String URL = "http://13.40.142.158:8080/#/";
 
     private static final By ROWS_IN_TRIGGERS = By.cssSelector(".behaviour-row");
 

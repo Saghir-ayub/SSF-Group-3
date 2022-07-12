@@ -6,6 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import pageObjects.HomePage;
+import pageObjects.ReportPage;
 import pageObjects.SimpleMerchantPage;
 import pageObjects.TriggerPage;
 
@@ -19,17 +20,18 @@ public class SimpleMerchant {
     public static WebDriver driver = driverFactory.getDriver();
     private HomePage homepage = new HomePage(driver);
     private SimpleMerchantPage merchantPage = new SimpleMerchantPage(driver);
-
     private TriggerPage triggers = new TriggerPage(driver);
+
+    private ReportPage reports = new ReportPage(driver);
 
     /**Delete all current behaviours for setup
      *Navigates to new behaviour
      */
     @Before
     public void individualSetUp(){
-//        triggers.goTo();
-//        triggers.navigateToAndDeleteBehaviour();
-//        triggers.navigateToNewBehaviour();
+        triggers.goTo();
+        triggers.navigateToAndDeleteBehaviour();
+        triggers.navigateToNewBehaviour();
     }
 
     /**Make a user request
@@ -37,14 +39,18 @@ public class SimpleMerchant {
      */
 
     @Test
-    public void testingTriggerOne(){
-//        triggers.triggerCardNumber("4825503966212779","3ds-verifyenrolled");
-//        triggers.responseTypeList("Realex: Void Successful");
-//        triggers.saveBehaviour();
-//        triggers.navigateToNewBehaviour();
-//        triggers.triggerPence("99","void");
-//        triggers.responseTypeList("Realex: Void Successful");
-//        triggers.saveBehaviour();
+    public void CardNotEnrolledThenAuthSuccess(){
+        triggers.triggerCardNumber("4242424242424242","3ds-verifyenrolled");
+        triggers.responseTypeList("RealMpi VerifyEnrolled: Verify Enrolled always successful");
+        triggers.saveBehaviour();
+        triggers.navigateToNewBehaviour();
+        triggers.triggerCardNumber("4242424242424242","3ds-verifysig");
+        triggers.responseTypeList("Realex: Always successful");
+        triggers.saveBehaviour();
+        triggers.navigateToNewBehaviour();
+        triggers.triggerCardNumber("4242424242424242","auth");
+        triggers.responseTypeList("RealMpi VerifySig: Successful authentication");
+        triggers.saveBehaviour();
         homepage.goTo();
         merchantPage.enterCreditCardNumber("4242424242424242");
         merchantPage.enterFirstName("Saghir");
@@ -53,62 +59,76 @@ public class SimpleMerchant {
         merchantPage.enterExpirationYear("2025");
         merchantPage.enterVerificationCode("123");
         merchantPage.enterAmount("1234999");
-        merchantPage.selectCurrency(2);
+        merchantPage.selectCurrency(1);
         merchantPage.submitPurchaseRequest();
+        merchantPage.clickAuthenticationSubmitButton();
+        reports.checkIfSuccess();
     }
 
-//        Types of triggers:
-//        triggers.triggerAny();
-//        triggers.triggerXml("www.google.com");
-//        triggers.triggerCardNumber("1111222233334444","3ds-verifyenrolled");
-//        triggers.triggerNameOfCardHolder("Saghir Ayub","auth");
-//        triggers.triggerPence("99","void");
-//        triggers.triggerAuthRequest();
-//        triggers.triggerEnrolledRequest();
-//        triggers.triggerSigRequest();
-//        triggers.triggerVoidRequest();
+    @Test
+    public void CardNotEnrolledThenAuthFail(){
+        triggers.triggerCardNumber("4242424242424242","3ds-verifyenrolled");
+        triggers.responseTypeList("RealMpi VerifyEnrolled: Verify Enrolled always successful");
+        triggers.saveBehaviour();
+        triggers.navigateToNewBehaviour();
+        triggers.triggerCardNumber("4242424242424242","3ds-verifysig");
+        triggers.responseTypeList("RealMpi VerifySig: Authentication Unavailable");
+        triggers.saveBehaviour();
+        triggers.navigateToNewBehaviour();
+        triggers.triggerCardNumber("4242424242424242","auth");
+        triggers.responseTypeList("RealMpi VerifySig: Successful authentication");
+        triggers.saveBehaviour();
+        homepage.goTo();
+        merchantPage.enterCreditCardNumber("4242424242424242");
+        merchantPage.enterFirstName("Saghir");
+        merchantPage.enterLastName("Ayub");
+        merchantPage.enterExpirationMonth("1");
+        merchantPage.enterExpirationYear("2025");
+        merchantPage.enterVerificationCode("123");
+        merchantPage.enterAmount("1234999");
+        merchantPage.selectCurrency(1);
+        merchantPage.submitPurchaseRequest();
+        merchantPage.clickAuthenticationSubmitButton();
+        reports.checkIfFail();
+    }
 
-//        Types of responses:
-//        triggers.setCustomTextResponse("You failure","I said you failure");
-//        triggers.responseTypeList("Default Realex simulation");
 
-//        Saving Behaviour:
-//        triggers.saveBehaviour();
 
     @Test @Ignore
-    public void triggersAndResponseTypeExamples(){
-
+    public void triggerNameOfCardHolderCheck(){
+        triggers.triggerNameOfCardHolder("Thai","any");
+        triggers.responseTypeList("Default Realex simulation");
+        triggers.saveBehaviour();
+        homepage.goTo();
+        merchantPage.enterCreditCardNumber("4242424242424242");
+        merchantPage.enterFirstName("Thai");
+        merchantPage.enterLastName("Lee");
+        merchantPage.enterExpirationMonth("1");
+        merchantPage.enterExpirationYear("2025");
+        merchantPage.enterVerificationCode("123");
+        merchantPage.enterAmount("1234999");
+        merchantPage.selectCurrency(1);
+        merchantPage.submitPurchaseRequest();
+        reports.checkIfSuccess();
     }
 
-
-    /** Proceed to checkout - not signed in
-     * Pre-Condition - Must have one item in basket && not be signed in
-     * Navigate to basket
-     * Click proceed to checkout
-     * Verify sign in page displayed
-     */
     @Test
-    public void proceedToCheckoutNotLoggedIn(){
-
-    }
-
-    /** Proceed to checkout - signed in
-     * Pre-Condition - Must have one item in basket && be signed in
-     * Navigate to basket
-     * Click proceed to checkout
-     * Delivery Address Page is shown
-     * Click proceed to checkout
-     * Shipping page is shown
-     * Agree to terms of service
-     * Click proceed to checkout
-     * Payment page is displayed
-     * Click pay by bank wire
-     * Confirm order
-     * Order confirmation page is displayed
-     */
-    @Test
-    public void proceedToCheckoutAndBuyLoggedIn(){
-
+    public void triggerPenceCheck(){
+        triggers.triggerPence("30","any");
+        triggers.responseTypeList("Default Realex simulation");
+        triggers.saveBehaviour();
+        homepage.goTo();
+        merchantPage.enterCreditCardNumber("4242424242424242");
+        merchantPage.enterFirstName("Thai");
+        merchantPage.enterLastName("Lee");
+        merchantPage.enterExpirationMonth("1");
+        merchantPage.enterExpirationYear("2025");
+        merchantPage.enterVerificationCode("123");
+        merchantPage.enterAmount("30");
+        merchantPage.selectCurrency(0);
+        merchantPage.submitPurchaseRequest();
+        merchantPage.clickAuthenticationSubmitButton();
+        reports.checkIfSuccess();
     }
 
 
